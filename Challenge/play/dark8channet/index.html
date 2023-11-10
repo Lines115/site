@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark 8 Chan Net</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        #messages {
+            background-color: #333;
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+        #input-container {
+            display: flex;
+        }
+        #message-input {
+            flex: 1;
+            padding: 5px;
+        }
+        #send-button {
+            background-color: #0074D9;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dark 8 Chan Net</h1>
+        <div id="messages">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div id="input-container">
+            <input type="text" id="message-input" placeholder="Sorry... Dark 8 Chan Net is not woking, this is last messages on forum">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const messageInput = document.getElementById('message-input');
+        const sendButton = document.getElementById('send-button');
+        const messagesContainer = document.getElementById('messages');
+
+        var challenge = 0;
+
+        sendButton.addEventListener('click', () => {});
+
+        function displayMessage(message) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            messagesContainer.appendChild(messageElement);
+        }
+
+        displayMessage('(2023-08-26 18:26) Lines: Hi... Your is so fast!');
+        displayMessage('(2023-08-26 18:26) Lines: I wait for you...');
+        displayMessage('(2023-08-26 18:26) Lines: You next mission... Oh...');
+        displayMessage('(2023-08-26 18:27) Lines: I don\'t have much time...');
+        displayMessage('(2023-08-26 18:27) Lines: He so fast! Oh...');
+        displayMessage('(2023-08-26 18:28) Lines: GO TO /blackspace/ !!!');
+        displayMessage('(2023-08-26 18:28) Lines: I\'m continue cre-');
+        displayMessage('(2023-08-26 18:28) 8 Chan Console: Lines is banned');
+    </script>
+
+    <!--
+        Oh... No...
+        - Lines
+    -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>SuperBank: Account</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginForm = document.getElementById("loginForm");
+            const loginMessage = document.getElementById("loginMessage");
+
+            loginForm.addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                const formData = new FormData(loginForm);
+                const username = formData.get("username");
+                const password = formData.get("password");
+
+                const response = await fetch("accounts.db");
+                const accountsData = await response.text();
+                const accounts = accountsData.split("\n").filter(Boolean);
+
+                for (const account of accounts) {
+                    const [storedUsername, storedPassword] = account.split(":");
+                    if (storedUsername === username && storedPassword === password) {
+                        loginMessage.textContent = "Login successful!";
+                        console.log('Login Successful!')
+                        return;
+                    }
+                }
+
+                console.log('Login failed. Please check your credentials.')
+                loginMessage.textContent = "Login failed. Please check your credentials.";
+            });
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

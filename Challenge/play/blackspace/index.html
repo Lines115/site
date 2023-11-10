@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BlackSpace</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00FF00;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        #matrix {
+            font-family: 'Matrix Code NFI', monospace;
+            font-size: 24px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 130%;
+            overflow: hidden;
+            pointer-events: none;
+            opacity: 0.25;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to BlackSpace</h1>
+    <p>We are the future of hacking!</p>
+    <h2>Login page</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <input type="submit" id="loginbtn" value="Login">
+    <div id="matrix"></div>
+    <script>
+        function generateMatrix() {
+            const matrix = document.getElementById("matrix");
+            const characters = "What ? Go away! Huh... Okay, look at this: \nint16_t var = 50\nhack the nothing\nmsfconsole -q\nmsfconsole\nmsf6 >>> set RHOST 34.29.58.22";
+            let matrixText = "BLACK\n\n\n\n\n\n ";
+
+            for (let i = 0; i < 1500; i++) {
+                matrixText += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+
+            matrix.innerHTML = matrixText + " \n\n\n\n SPACE";
+        }
+        
+        const passwd = document.getElementById("password");
+        const username = document.getElementById("username");
+        const loginbtn = document.getElementById("loginbtn");
+
+        loginbtn.addEventListener("click", () => {
+            console.log("Login clicked");
+            console.log(passwd.value);
+            console.log(username.value);
+            if (passwd.value === "toor_admin" && username.value === "root") {
+                console.log("Passwd and username is correct");
+                window.location.href = "blackspace/main/index.html";
+            }
+            else {
+                alert("Wrong username or password!");
+            }
+        });
+
+
+        setInterval(generateMatrix, 10);
+    </script>
+</body>
+</html>
+
+
+<!--
+    Huh... All normal... I hacked this server... I created a new site - BlackSpace
+    You know what to do with it (64,32,64): /base64.txt
+    - Lines
+-->

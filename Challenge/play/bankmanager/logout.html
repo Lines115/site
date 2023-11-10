@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=50, initial-scale=1.0">
+    <title>LogOut</title>
+</head>
+<body>
+    <script>
+        // Cookie delete
+        function deleteCookie(name) {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+        }
+        deleteCookie('account');
+        window.location.href = "index.html";
+    </script>
+</body>
+</html>
