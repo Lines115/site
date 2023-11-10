@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BlackSpace</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00FF00;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        #matrix {
+            font-family: 'Matrix Code NFI', monospace;
+            font-size: 24px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            opacity: 0.15;
+        }
+        button {
+            font-family: 'Courier New', monospace;
+            background-color: #00000000;
+            color: #00FF00;
+            border-radius: 15%;
+            border-color: #00FF00;
+            border-style: solid;
+            font-size: 20px;  
+        }
+
+        button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        #mainbtn {
+            position: fixed !important;
+            top: 400;
+            left: 38.7%;
+            width: 50;
+        }
+
+        #forumbtn {
+            position: static !important;
+            top: 400;
+            right: 200;
+            width: 50;
+        }
+
+        #guidebtn {
+            position: fixed !important;
+            top: 400;
+            right: 37.5%;
+            width: 50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to BlackSpace Forum</h1>
+    <p>We are the future of hacking forums!</p>
+
+    <footer id="elements">
+        <button id="mainbtn" name="mainbtn">Main</button>
+        <button id="forumbtn" name="forumbtn">Forum</button>
+        <button id="guidebtn" name="guidebtn">Guide</button>
+    </footer>
+
+    <h1>Forum is not ready</h1>
+
+    <div id="matrix"></div>
+    <script>
+        function generateMatrix() {
+            const matrix = document.getElementById("matrix");
+            const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-=_+";
+            let matrixText = "BLACK ";
+
+            for (let i = 0; i < 1000; i++) {
+                matrixText += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+
+            matrix.innerHTML = matrixText + " SPACE";
+        }
+
+        setInterval(generateMatrix, 10);
+
+        const mainbtn = document.getElementById("mainbtn");
+        mainbtn.addEventListener("click", () => {
+            window.location.href = "index.html";
+        });
+
+        const forumbtn = document.getElementById("forumbtn");
+        forumbtn.addEventListener("click", () => {
+            window.location.href = "forum/index.html";
+        });
+
+        const guidebtn = document.getElementById("guidebtn");
+        guidebtn.addEventListener("click", () => {
+            window.location.href = "guide/index.html";
+        });
+
+
+    </script>
+</body>
+</html>

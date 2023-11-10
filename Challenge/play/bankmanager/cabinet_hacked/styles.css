@@ -1,0 +1,147 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Bank Dashboard Styles (Hacked Version) */
+.bank-header {
+    background-color: #1b4d17;
+    color: #ffd700;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.bank-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.bank-nav ul li {
+    margin: 0 2rem;
+}
+
+.bank-nav ul li a {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.bank-nav ul li a:hover {
+    color: #00ff00;
+}
+
+.bank-main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #122d0d;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 255, 0, 0.5);
+}
+
+.bank-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.bank-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #00ff00;
+    text-align: center;
+}
+
+.account-section {
+    margin-top: 2rem;
+}
+
+.account-summary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-item {
+    flex: 1;
+    padding: 1rem;
+    background-color: #122d0d;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 255, 0, 0.3);
+    text-align: center;
+    color: #00ff00;
+    margin-right: 1rem;
+}
+
+.transaction-section {
+    margin-top: 2rem;
+}
+
+.transaction-list {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #00ff00;
+}
+
+.transaction-date,
+.transaction-amount {
+    font-size: 1.1rem;
+    color: #00ff00;
+}
+
+.transaction-description {
+    flex: 1;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    color: #ffd700;
+}
+
+.bank-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1b4d17;
+    color: #ffd700;
+}
+
+/* Reset CSS and additional styling as needed */
+
+.glitch-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.glitch-effect {
+    position: relative;
+    animation: glitch 5s infinite;
+}
+
+@keyframes glitch {
+    0%, 100% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-2px, 2px);
+    }
+    50% {
+        transform: translate(2px, -2px);
+    }
+    75% {
+        transform: translate(-2px, 2px);
+    }
+}

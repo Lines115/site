@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperBank - Your Trusted Bank</title>
+    <link rel="stylesheet" text="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="bankmanager">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to SuperBank</h1>
+        <p>Your trusted partner in finance.</p>
+
+        <section class="login-section">
+            <h2>Login to Your Account</h2>
+            <p id="loginMessage"></a>
+            <form action="javascript/login.js" method="post" id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- TODO: Create login and register functions, start the server to internet
+    - John -->
+    <!-- OK, clear the logs in /logs, please
+    - Kate -->
+    <!-- I cleared the logs (2023-08-22)
+    - John -->
+    <!-- Thanks, John
+    - Kate -->
+
+    <footer>
+        <p>&copy; 2023 SuperBank. All rights reserved.</p>
+    </footer>
+
+    <script src="./javascript/login.js"></script>
+</body>
+</html>
